@@ -2,7 +2,7 @@
 <template encoding-version="1.3">
     <description></description>
     <groupId>4f6c0920-0170-1000-8994-ac4c8e318393</groupId>
-    <name>Monitor PGs 20200222</name>
+    <name>Monitor PGs 20200224</name>
     <snippet>
         <controllerServices>
             <id>5ebf91a2-9840-3db4-0000-000000000000</id>
@@ -154,6 +154,31 @@
                     <source>
                         <groupId>7dc958d4-7114-3692-0000-000000000000</groupId>
                         <id>c74c3cc7-277a-3364-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>398e175e-5ecd-3f94-0000-000000000000</id>
+                    <parentGroupId>7dc958d4-7114-3692-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>155a03ec-c4a1-332e-0000-000000000000</groupId>
+                        <id>143abda9-627b-3364-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>filteredTypes</selectedRelationships>
+                    <source>
+                        <groupId>7dc958d4-7114-3692-0000-000000000000</groupId>
+                        <id>6ad217cf-0adc-3cc3-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
@@ -406,6 +431,181 @@
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
+                <processGroups>
+                    <id>155a03ec-c4a1-332e-0000-000000000000</id>
+                    <parentGroupId>7dc958d4-7114-3692-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>664.0</x>
+                        <y>1464.0</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>7a9e776f-ceb9-3cbf-0000-000000000000</id>
+                            <parentGroupId>155a03ec-c4a1-332e-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>155a03ec-c4a1-332e-0000-000000000000</groupId>
+<id>b2515f22-c138-3557-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                            <name></name>
+                            <source>
+<groupId>155a03ec-c4a1-332e-0000-000000000000</groupId>
+<id>143abda9-627b-3364-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <inputPorts>
+                            <id>143abda9-627b-3364-0000-000000000000</id>
+                            <parentGroupId>155a03ec-c4a1-332e-0000-000000000000</parentGroupId>
+                            <position>
+<x>-159.19427514715892</x>
+<y>1092.0053003073394</y>
+                            </position>
+                            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                            <name>input</name>
+                            <state>STOPPED</state>
+                            <type>INPUT_PORT</type>
+                        </inputPorts>
+                        <processors>
+                            <id>b2515f22-c138-3557-0000-000000000000</id>
+                            <parentGroupId>155a03ec-c4a1-332e-0000-000000000000</parentGroupId>
+                            <position>
+<x>552.0</x>
+<y>1056.0</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.10.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Regular Expression</key>
+        <value>
+            <name>Regular Expression</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replacement Value</key>
+        <value>
+            <name>Replacement Value</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>
+            <name>Character Set</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Maximum Buffer Size</key>
+        <value>
+            <name>Maximum Buffer Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Replacement Strategy</key>
+        <value>
+            <name>Replacement Strategy</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Evaluation Mode</key>
+        <value>
+            <name>Evaluation Mode</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Line-by-Line Evaluation Mode</key>
+        <value>
+            <name>Line-by-Line Evaluation Mode</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Regular Expression</key>
+        <value>(?s)(^.*$)</value>
+    </entry>
+    <entry>
+        <key>Replacement Value</key>
+        <value>{
+	"provenance": {
+		"request": {
+			"searchTerms": {
+				"ProcessorID": "${puuid}",
+				"EventType": "DROP"
+			},
+			"startDate": "${startDateCET}",
+			"endDate": "${finishDateCET}",
+			"maxResults": 5,
+			"summarize": true,
+			"incrementalResults":false
+		}
+	}
+}</value>
+    </entry>
+    <entry>
+        <key>Character Set</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>Maximum Buffer Size</key>
+        <value>1 MB</value>
+    </entry>
+    <entry>
+        <key>Replacement Strategy</key>
+        <value>Regex Replace</value>
+    </entry>
+    <entry>
+        <key>Evaluation Mode</key>
+        <value>Entire text</value>
+    </entry>
+    <entry>
+        <key>Line-by-Line Evaluation Mode</key>
+        <value>All</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <executionNodeRestricted>false</executionNodeRestricted>
+                            <name>Prepare Query Provenance Request</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                        </processors>
+                    </contents>
+                    <name>Query Provenance</name>
+                    <variables/>
+                </processGroups>
                 <processGroups>
                     <id>196da956-2eda-3c87-0000-000000000000</id>
                     <parentGroupId>7dc958d4-7114-3692-0000-000000000000</parentGroupId>
@@ -2159,9 +2359,11 @@ session.remove(flowFiles)</value>
 </entry>
 <entry>
     <key>Max Wait Time</key>
+    <value>500 millis</value>
 </entry>
 <entry>
     <key>Max Total Connections</key>
+    <value>8</value>
 </entry>
 <entry>
     <key>Validation-query</key>
@@ -2169,21 +2371,27 @@ session.remove(flowFiles)</value>
 </entry>
 <entry>
     <key>dbcp-min-idle-conns</key>
+    <value>0</value>
 </entry>
 <entry>
     <key>dbcp-max-idle-conns</key>
+    <value>8</value>
 </entry>
 <entry>
     <key>dbcp-max-conn-lifetime</key>
+    <value>-1</value>
 </entry>
 <entry>
     <key>dbcp-time-between-eviction-runs</key>
+    <value>-1</value>
 </entry>
 <entry>
     <key>dbcp-min-evictable-idle-time</key>
+    <value>30 mins</value>
 </entry>
 <entry>
     <key>dbcp-soft-min-evictable-idle-time</key>
+    <value>-1</value>
 </entry>
                             </properties>
                             <state>ENABLED</state>
@@ -3945,7 +4153,7 @@ session.remove(flowFiles)</value>
                     <parentGroupId>7dc958d4-7114-3692-0000-000000000000</parentGroupId>
                     <position>
                         <x>-88.0</x>
-                        <y>1480.0</y>
+                        <y>1488.0</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -4324,5 +4532,5 @@ session.remove(flowFiles)</value>
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>02/22/2020 23:49:43 CET</timestamp>
+    <timestamp>02/24/2020 22:32:57 CET</timestamp>
 </template>
